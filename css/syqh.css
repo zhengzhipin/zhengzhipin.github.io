@@ -1,0 +1,1849 @@
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+audio,
+canvas,
+video {
+    display: inline-block;
+}
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+ 
+html {
+     
+    -ms-text-size-adjust: 100%; 
+    -webkit-text-size-adjust: 100%; /*修正手持设备字体变化*/
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    background: transparent; /*修正win8系统IE连接灰色背景*/
+    outline:none;
+    blr:expression(this.onFocus=this.blur());
+}
+a:focus {
+    outline: 0;
+}
+a:active,
+a:hover {
+    outline: 0;
+}
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+ 
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+ul,
+ol,
+li { 
+    list-style: none;
+    float: left;
+}
+i, em{
+    font-style: normal;
+}
+/*清除浮动*/
+.clear {
+    clear: both;
+}
+.f-cb{
+    zoom: 1;
+}
+.f-cb:after{
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+    overflow:hidden;
+    content:".";
+}
+.fl {
+    float:left;
+    display: inline;
+}
+.fr {
+    float:right;
+    display: inline;
+}
+.por{
+    position: relative;
+}
+.poa{
+    position: absolute;
+}
+.poa-f{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.ovh{
+    overflow: hidden;
+}
+.noselect{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.z1{
+    z-index: 1;
+}
+.z2{
+    z-index: 2;
+}
+.dn{
+    display: none;
+}
+.w-f{
+    width: 100%;
+}
+.h-f{
+    height: 100%;
+}
+.fwn{
+    font-weight: normal;
+}
+.t-f{
+    transition: all 0.5s;
+}
+.t-c{
+    transition: color 0.5s;
+}
+.t-bg{
+    transition: background 0.5s;
+} 
+/* CSS Document */
+.header{
+	height: 104px;
+}
+.logo{
+	margin-left: 3%;
+}
+.logo.poa{
+	left: 3%;
+	top: 0;
+}
+.nav-btn{
+	width: 71px;
+	height: 40px;
+	padding: 0 12px;
+	margin: 32px 2% 0 0;
+	background: #fff;
+	font-size: 20px;
+	line-height: 40px;
+	color: #5c5c5c;
+	cursor: pointer;
+}
+.nav-btn.poa{
+	right: 2%;
+	top: 32px;
+	margin: 0;
+}
+.nav-btn .line{
+	width: 23px;
+	height: 18px;
+	margin-top: 11px;
+}
+.nav-btn span{
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 8px;
+	width: 23px;
+	height: 2px;
+	margin-bottom: 5px;
+	background: #6e6e6e;
+}
+.nav-btn span.top{
+	top: 0;
+	transform-origin: left top;
+}
+.nav-btn span.bot{
+	top: 16px;
+	transform-origin: left bottom;
+}
+.nav{
+	left: 0;
+	top: 0;
+	padding-top: 130px;
+	width: 100%;
+	background: #fff;
+}
+.nav ul{
+	width: 100%;
+}
+.nav li{
+	position: relative;
+	width: 13%;
+	min-width: 113px;
+	padding: 0 0 1px 3%;
+	margin-bottom: 38px;
+	line-height: 31px;
+}
+.nav p{
+	color: #666;
+	transition: color 0.5s;
+}
+.nav p.en{
+	font-size: 18px;
+	color: #818181;
+}
+.nav a:hover p{
+	color: #ba845c;
+}
+.nav .line{
+	left: 18%;
+	bottom: 0;
+	width: 32px;
+	height: 1px;
+	background: #c9c9c9;
+}
+.nav .in{
+	left: -32px;
+	top: 0;
+	width: 32px;
+	height: 1px;
+	background: #ba845c;
+}
+.nav .btn{
+	padding: 0 3% 0 2%;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	line-height: 42px;
+}
+.nav .list, .nav .btn{
+	filter:alpha(opacity=0);
+	opacity: 0;
+}
+.nav .btn p.fr{
+	cursor: pointer;
+}
+.nav .btn p.fr img{
+	margin-left: 55px;
+	filter:alpha(opacity=40);
+	opacity: 0.4;
+}
+.language p{
+	color: #868686;
+	cursor: pointer;
+}
+.language span{
+	display: inline-block;
+	padding-left: 10px;
+	transition: color 0.5s;
+}
+.language span.hover,
+.language span.cur{
+	color: #333;
+}
+.language img{
+	margin-left: 5px;
+	filter:alpha(opacity=40);
+	opacity: 0.4;
+}
+.language-list{
+	padding: 0 3% 0 2%;
+	line-height: 42px;
+}
+.language-list a{
+	display: inline-block;
+	margin-right: 15px;
+	color: #666;
+}
+.language-list a.en{
+	font-size: 17px;
+	text-transform: uppercase;
+	transition: color 0.5s;
+}
+.language-list a.en:hover{
+	color: #333;
+}
+.nav .search{
+	padding: 35px 3% 38px 2%;
+	line-height: 44px;
+}
+.nav form{
+	width: 100%;
+}
+.nav .search input{
+	width: 380px;
+	height: 58px;
+	border: 0;
+	font: 36px/58px Arial;
+	color: #e1e1e1;
+}
+.nav .search input.cur{
+	color: #333;
+}
+.nav .search .submit{
+	width: 58px;
+	background: url("http://www.dunnu.com/static/web/css/../img/bg_btn01.png") no-repeat center;
+}
+.footer{
+	padding: 4% 4% 6.5% 0;
+	background: #cde2de;
+	line-height: 30px;
+}
+.footer .list{
+	width: 78%;
+}
+.footer .list ul{
+	width: 100%
+}
+.footer .list li{
+	width: 15.5%;
+	padding-left: 4.5%;
+}
+.footer .list a{
+	display: inline-block;
+	font-size: 14px;
+	line-height: 30px;
+	font-family: "\5b8b\4f53";
+	color: #333;
+	transition: all 0.5s;
+}
+.footer .list a.t{
+	padding-bottom: 2px;
+	margin-bottom: 20px;
+	font-size: 20px;
+	line-height: 56px;
+}
+.footer .list .line{
+	left: 0;
+	bottom: 0;
+	width: 35px;
+	height: 1px;
+	background: #666;
+}
+.footer .list .in{
+	left: -35px;
+	top: 0;
+	width: 35px;
+	height: 1px;
+	background: #229c85;
+}
+.footer .mark{
+	width: 22%;
+}
+.footer .box{
+	width: 25%;
+	margin-left: 10%;
+	min-width: 70px;
+	font: 14px/24px Arial;
+	text-align: center;
+}
+.footer .share{
+	margin-top: 18px;
+}
+.footer .share a{
+	float: right;
+	width: 30px;
+	height: 30px;
+	padding: 0;
+	margin: 0 5px;
+	background: url("http://www.dunnu.com/static/web/css/../img/bg_sign05.png") no-repeat;
+}
+.footer .share a.bds_sqq{
+	background-image: url("http://www.dunnu.com/static/web/css/../img/bg_sign06.png");
+}
+.footer .share a.bds_tqq{
+	background-image: url("http://www.dunnu.com/static/web/css/../img/bg_sign07.png");
+}
+.footer .share a.bds_tsina{
+	background-image: url("http://www.dunnu.com/static/web/css/../img/bg_sign08.png");
+}
+.footer p.tar{
+	margin-top: 15px;
+	font-size: 17px;
+	color: #808080;
+	text-align: right;
+}
+.footer p.tar a{
+	color: #808080;
+	transition: 0.5s;
+}
+.footer p.tar a:hover{
+	color: #333;
+}
+
+
+/*INDEX*/
+.iban{
+	top: -104px;
+	margin-bottom: -104px;
+	*top: 0;
+	*margin: -104px 0 0;
+	background: url("http://www.dunnu.com/static/web/css/../../img/loadings.gif") no-repeat center;
+}
+.iban img{
+	position: absolute;
+	top: -100%;
+	opacity: 0;
+}
+.iban img.cur{
+	animation: ibanImg 5s linear forwards;
+}
+@keyframes ibanImg{
+	0%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(1.1);
+	}
+}
+.iban canvas{
+	transform: scale(1.1);
+}
+.iban .detail{
+	left: 0;
+	top: 35%;
+	width: 28%;
+	min-width: 326px;
+	font-size: 14px;
+	font-family: "\5b8b\4f53";
+	color: #686c6b;
+	filter:alpha(opacity=0);
+	opacity: 0;
+}
+.iban .detail p.en{
+	font: 80px/72px Vijaya;
+	color: #58605e;
+}
+.iban .detail p.fz36{
+	font-size: 36px;
+	line-height: 66px;
+	color: #2e3433;
+}
+.iban .btn{
+	margin-top: 20%;
+}
+.iban .btn a{
+	display: inline-block;
+	width: 84px;
+	padding-left: 56px;
+	background: url("http://www.dunnu.com/static/web/css/../img/bg_sign12.png") no-repeat 30px 0;
+	border: 1px solid #333;
+	font: 14px/38px Arial;
+	color: #333;
+	text-transform: uppercase;
+	transition: all 0.5s;
+}
+.iban .btn a.photo{
+	margin-left: -1px;
+	background-image: url("http://www.dunnu.com/static/web/css/../img/bg_sign13.png");
+}
+.iban .btn a:hover{
+	background-position: 30px -38px;
+	background-color: #fff;
+	color: #000;
+}
+.iban .video-box .box{
+	left: 50%;
+	top: 50%;
+	width: 100px;
+	height: 100px;
+	margin: -50px 0 0 -50px;
+	filter:alpha(opacity=0);
+	opacity: 0;
+}
+.iban .video-box .close{
+	right: 20px;
+	top: 20px;
+	width: 40px;
+	height: 40px;
+	background: url("http://www.dunnu.com/static/web/css/../img/close01.jpg") no-repeat;
+	cursor: pointer;
+}
+a.more-btn{
+	display: inline-block;
+	width: 150px;
+	padding: 1px 0;
+	margin-top: 20%;
+	font: 20px/38px Vijaya;
+	color: #58605e;
+	text-align: center;
+}
+a.more-btn.g{
+	color: #818181;
+}
+a.more-btn span{
+	display: inline-block;
+}
+a.more-btn span:first-child{
+	position: relative;
+}
+a.more-btn span.af{
+	left: 0;
+	top: 28px;
+	width: 148px;
+	height: 38px;
+	color: #6b877f;
+	filter:alpha(opacity=0);
+	opacity: 0;
+}
+a.more-btn .blank{
+	top: -100%;
+	background: #fff;
+	display: none;
+}
+a.more-btn.g .blank{
+	background: #cce1dd;
+}
+a.more-btn .border.w{
+	width: 100%;
+	height: 1px;
+	background: #8f9997;
+}
+a.more-btn.g .border.w{
+	background: #b4b4b4;
+}
+a.more-btn .border.he{
+	width: 1px;
+	height: 100%;
+	background: #8f9997;
+}
+a.more-btn.g .border.he{
+	background: #b4b4b4;
+}
+a.more-btn .border.t{
+	left: 0;
+	top: 0;
+}
+a.more-btn .border.r{
+	right: 0;
+	bottom: 0;
+}
+a.more-btn .border.b{
+	right: 0;
+	bottom: 0;
+}
+a.more-btn .border.l{
+	left: 0;
+	top: 0;
+}
+a.more-btn .border.hover{
+	background: #485a56;
+}
+a.more-btn.g .border.hover{
+	background: #7c938c;
+}
+a.more-btn .border.w.hover{
+	width: 100%;
+}
+a.more-btn .border.he.hover{
+	height: 100%;
+}
+a.more-btn .border.t.hover{
+	left: -100%;
+	top: 0;
+}
+a.more-btn .border.r.hover{
+	right: 0;
+	bottom: 100%;
+}
+a.more-btn .border.b.hover{
+	left: 100%;
+	bottom: 0;
+}
+a.more-btn .border.l.hover{
+	left: 0;
+	top: 100%;
+}
+.iban .bg{
+	top: 100%;
+	background: #eee;
+}
+.iabout .list{
+	left: -50%;
+	top: 0;
+	width: 50%;
+}
+.iabout .tips{
+	padding: 10.5% 19% 9%;
+	font-size: 14px;
+	color: #989898;
+	text-align: center;
+	border-bottom: 1px solid #e5e5e5;
+}
+.iabout .tips p.fz24{
+	margin-bottom: 20px;
+	font-size: 24px;
+	line-height: 42px;
+	color: #626b68;
+}
+.iabout .tips a.more{
+	margin-top: 44px;
+}
+.iabout .list-in ul{
+	width: 100%;
+}
+.iabout .list-in li{
+	position: relative;
+	overflow: hidden;
+	width: 33.3%;
+}
+.iabout .list-in li.last{
+	width: 33.4%;
+}
+.iabout .img{
+	right: -50%;
+	top: 0;
+	width: 50%;
+	height: 100%;
+}
+a.imgshow .bg{
+
+	background: #1e2524;
+	filter:alpha(opacity=40);
+	opacity: 0.4;
+}
+a.imgshow .sign{
+	display: none;
+	left: 50%;
+	top: 50%;
+	width: 106px;
+	margin: -20px 0 0 -53px;
+	font-size: 30px;
+	line-height: 40px;
+	color: #fff;
+	text-align: center;
+}
+a.imgshow .line{
+	display: inline-block;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #fff;
+	filter:alpha(opacity=0);
+	opacity: 0;
+}
+a.imgshow .t{
+	top: 0;
+}
+a.imgshow .b{
+	bottom: 0;
+}
+.brands{
+	padding:0 15%;
+	 
+ 
+}
+.brands ul{
+	width: 100%;
+	float:left;
+}
+.brands li{
+	 
+	width: 33.3%;
+	color: #989898;
+	text-align: center;
+	float:left;
+}
+.brands .in{
+	width: 85%;
+	margin: 0 auto;
+}
+.brands a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	transition: background 0.5s;
+}
+.brands a:hover{
+	background: #b9e3e7;
+	color:#ffffff;
+}
+
+ 
+.brands .top{
+	padding: 10% 11% 0;
+	 
+}
+.brands .num{
+	height:56px;
+	color:#221815;
+	line-height:50px;
+	font-size:18px; 
+	transition: background 0.5s;
+	font-family:'微软雅黑';
+}
+ 
+ 
+.brands .line{
+	width: 57px;
+	height: 2px;
+	background: #c0c0c0;
+	margin: 0 auto 12%;
+	transition: background 0.5s;
+}
+.brands a:hover .line{
+	background: #fff;
+}
+.brands p{
+	color: #989898;
+}
+.brands p {
+	margin-bottom: 8.5%;
+ font-family:'宋体';
+	color: #666666;
+	line-height:25px; font-size:14px;
+}
+.brands .img{
+	width:100%;
+	display: inline-block;
+}
+.brands img {
+    border: 0;
+	width:100%;
+    vertical-align: middle;
+    -ms-interpolation-mode:bicubic;
+    transition: transform 1s;
+}
+.brands img.hover{
+    transform: scale(1.15);
+}
+
+
+.inews ul{
+	width: 100%;
+}
+.inews li{
+	position: relative;
+	left: -50%;
+	overflow: hidden;
+	width: 50%;
+}
+.inews li:nth-child(2n),
+.inews li.right{
+	left: auto;
+	right: -50%;
+}
+.inews .detail{
+	left: 0;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	transition: background 0.5s;
+}
+.inews .detail.r{
+	left: auto;
+	right: 0;
+}
+.inews a:hover .detail {
+	background: #b9e3e7;
+}
+.inews .in{
+	padding:20% 17% 0;
+	line-height: 18px;
+	color: #666;
+	text-align: center;
+}
+.inews .in p.time{
+	margin-bottom: 3.5%;
+	font-size: 18px;
+	line-height: 24px;
+	color: #000;
+}
+.inews .in p.t{
+	margin-bottom: 3.5%;
+	font-size: 20px;
+	line-height: 34px;
+	font-family:'微软雅黑';
+	color: #333;
+}
+.inews .in p{
+	color: #666;
+	text-transform:uppercase;
+	 
+}
+.inews .in p.t2{
+ 
+	font-size:14px;
+	line-height:25px;
+	font-family:'宋体';
+	color: #666666;
+	border:1px solid #221815;
+	padding:10px 15px;
+}
+
+.inews img.sign{
+	left: 50%;
+	
+	bottom: 20%;
+	width: 15px;
+	height: 15px;
+	margin-left: -8px;
+}
+@media screen and (max-width:1440px){
+	.inews img.sign{
+		bottom: 15%;
+	}
+}
+@media screen and (max-width:1200px){
+	.inews a p:nth-child(2){
+		display: none;
+	}
+}
+.inews .arrow{
+	right: -18px;
+	top: 50%;
+	width: 18px;
+	height: 36px;
+	margin-top: -18px;
+	background: url("../images/bg_sign04.png") no-repeat;
+}
+.inews .arrows{
+	top: 50%;
+	width: 18px;
+	height: 36px;
+	margin-top: -18px;
+	left: -18px;
+	background-image: url("../images/bg_sign04l.png");
+}
+.inews a:hover .arrow{
+	background-image: url("../images/bg_sign04s.png");
+}
+.inews a:hover .arrows{
+	top: 50%;
+	width: 18px;
+	height: 36px;
+	margin-top: -18px;
+	left: -18px;
+	background-image: url("../images/bg_sign04ls.png");
+}
+.inews .img{
+	width: 50%
+}
+
+/*BRADN*/
+.inside-wrap{
+	top: -104px;
+	margin-bottom: -104px;
+	*top: 0;
+	*margin: -104px 0 0;
+}
+.brand-about{
+	background: url("http://www.dunnu.com/static/web/css/../../img/loadings.gif") no-repeat center;
+}
+.brand-about .bg{
+	top: 100%;
+	background: #eee;
+}
+.brand-about .img{
+	left: -32%;
+	width: 64%;
+	filter:alpha(opacity=0);
+	opacity: 0;
+}
+.brand-about .detail{
+	right: -18%;
+	width: 36%;
+	font-family: "\5b8b\4f53";
+	color: #8f8f8f;
+	filter:alpha(opacity=0);
+	opacity: 0;
+}
+.brand-about .in{
+	padding: 34% 10% 0 13%;
+}
+.brand-about .box p.t{
+	margin-bottom: 2.5%;
+	font-size: 16px;
+	line-height: 38px;
+	color: #857c74;
+}
+.brand-about .scroll{
+	left: 0;
+	top: 0;
+}
+.brand-about .btn{
+	margin-top: 10%;
+	height: 30px;
+}
+.brand-about .btn span{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin-right: 15px;
+	cursor: pointer;
+	transition: background 0.5s;
+}
+.brand-about .btn .prev{
+	background: url("http://www.dunnu.com/static/web/css/../img/prev01.png") no-repeat 0 -30px;
+}
+.brand-about .btn .next{
+	background: url("http://www.dunnu.com/static/web/css/../img/next01.png") no-repeat;
+}
+.brand-about .btn .prev.hover{
+	background-position: 0 0;
+}
+.brand-about .btn .next.hover{
+	background-position: 0 -30px;
+}
+.brand-history{
+	background: #f3f3f3;
+}
+.brand-history .detail{
+	width: 36%;
+}
+.brand-history .list{
+	width: 86px;
+	margin: 22% 0 0 25.5%;
+}
+.brand-history .list li{
+	width: 86px;
+	height: 60px;
+	font-size: 18px;
+	line-height: 60px;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.brand-history .list li.cur, .brand-history .list li.hover{
+	font-size: 19px;
+	color: #333;
+}
+.brand-history .line{
+	left: 0;
+	top: 0;
+	width: 86px;
+	height: 60px;
+	background: url("http://www.dunnu.com/static/web/css/../img/bg_sign09.png") no-repeat center;
+}
+.brand-history .img{
+	width: 64%;
+	min-height: 592px;
+	background: url("http://www.dunnu.com/static/web/css/../../img/loadings.gif") no-repeat center;
+	/*height: 911px;*/
+}
+.brand-history .tips{
+	left: 29%;
+	top: 50%;
+	width: 12%;
+	min-width: 120px;
+	height: 334px;
+	padding: 33px 1% 0;
+	margin-top: -184px;
+	background: #fff;
+	color: #968d87;
+	text-align: center;
+}
+.brand-history .tips p.year{
+	font-size: 72px;
+	line-height: 92px;
+	color: #8b6f58;
+}
+.brand-history .tips .int{
+	height: 136px;
+	margin-bottom: 5px;
+}
+.brand-history .tips .sign{
+	margin: 0 auto 55px;
+}
+.brand-history .tips p.en{
+	font-size: 18px;
+	color: #333;
+}
+.brand-history .tips .btn{
+	margin-top: 9px;
+	height: 70px;
+}
+.brand-history .tips span{
+	display: inline-block;
+	width: 49.2%;
+	height: 70px;
+	cursor: pointer;
+}
+.brand-history .tips .prev{
+	background: url("http://www.dunnu.com/static/web/css/../img/prev02.jpg") no-repeat right center;
+}
+.brand-history .tips .next{
+	margin-left: -1px;
+	background: url("http://www.dunnu.com/static/web/css/../img/next02.jpg") no-repeat left center;
+}
+.brand-history .tips .lines{
+	width: 1.6%;
+	height: 70px;
+	background: #c3c3c3;
+}
+.brand-list{
+	padding: 2% 8% 0;
+	background: url("http://www.dunnu.com/static/web/css/../../img/loadings.gif") no-repeat center;
+}
+.brand-list .btn{
+	top: 0;
+	width: 8%;
+	height: 100%;
+	cursor: pointer;
+}
+.brand-list .prev{
+	left: 0;
+	background: url("http://www.dunnu.com/static/web/css/../img/prev03.png") no-repeat center;
+}
+.brand-list .next{
+	right: 0;
+	background: url("http://www.dunnu.com/static/web/css/../img/next03.png") no-repeat center;
+}
+.brand-list .prev.hover{
+	animation: brandBtnPr 1s forwards;
+}
+@keyframes brandBtnPr{
+	0%{
+		background-position: right center;
+		opacity: 0;
+	}
+	100%{
+		background-position: center;
+		opacity: 1;
+	}
+}
+.brand-list .next.hover{
+	animation: brandBtnNe 1s forwards;
+}
+@keyframes brandBtnNe{
+	0%{
+		background-position: left center;
+		opacity: 0;
+	}
+	100%{
+		background-position: center;
+		opacity: 1;
+	}
+}
+.brand-list .list{
+	width: 100%;
+	margin: 0 auto;
+}
+.brand-list .list ul{
+	width: 100%;
+}
+.brand-list .list li{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	margin-right: 2%;
+}
+.brand-list .list a{
+	position: relative;
+	display: inline-block;
+}
+.brand-list .list a.mr{
+	margin-right: 2%;
+}
+.brand-list .list a.mb{
+	margin-bottom: 2%;
+}
+
+/*SERIES*/
+.series-nav{
+	left: 50%;
+	top: 44px;
+	z-index: 6;
+}
+.series-nav .in{
+	height: 30px;
+}
+.series-nav ul{
+	left: 50%;
+}
+.series-nav li{
+	position: relative;
+}
+.series-nav .sub{
+	left: 50%;
+	top: 30px;
+	width: 600%;
+	filter:alpha(opacity=0);
+	opacity: 0;
+}
+.series-nav a{
+	display: inline-block;
+	float: left;
+	margin: 0 15px;
+	line-height: 30px;
+	color: #989898;
+	transition: color 0.5s;
+}
+.series-nav a.tit{
+	display: inline-block;
+	padding: 0 22px;
+	margin: 0;
+	font-size: 24px;
+}
+.series-nav a:hover, .series-nav a.cur{
+	color: #ba845c;
+}
+.series-nav-blank{
+	height: 118px;
+}
+.series-box{
+	margin: 0 1%;
+	overflow: hidden;
+}
+.series-box .tips, .series-box .box{
+	width: 25%;
+}
+.series-box .tips{
+	height: 100%;
+}
+.series-box .tips.l25{
+	left: 25%;
+}
+.series-box .tips.l50{
+	left: 50%;
+}
+.series-box .ml{
+	margin-left: 25%;
+}
+.series-box .tips-in{
+	width: 100%;
+	height: 50%;
+}
+.tips-detail{
+	background: #f5f5f5;
+	font-size: 30px;
+	line-height: 62px;
+	text-align: center;
+}
+.tips-detail .in{
+	padding: 25% 10% 0;
+}
+.tips-detail p.year{
+	font-size: 72px;
+	line-height: 78px
+}
+.tips-detail a.t{
+	display: inline-block;
+	width: 100%;
+	color: #666;
+}
+.tips-detail .line{
+	left: 50%;
+	top: 67%;
+	width: 5%;
+	height: 1px;
+	background: #ababab;
+	margin-left: -2.5%;
+}
+
+/*STORES*/
+.stores-list{
+	background: url("http://www.dunnu.com/static/web/css/../../img/loadings.gif") no-repeat center;
+}
+.stores-main{
+	left: 50%;
+	top: 50%;
+	width: 400px;
+	height: 228px;
+	margin: -114px 0 0 -200px;
+	font-size: 80px;
+	line-height: 114px;
+	color: #fff;
+	text-align: center;
+}
+.stores-main a{
+	display: inline-block;
+	width: 150px;
+	height: 50px;
+	padding-left: 56px;
+	background: #fff;
+	font-size: 16px;
+	line-height: 54px;
+	color: #333;
+	transition: all 0.5s;
+}
+.stores-main span.fr{
+	display: inline-block;
+	width: 8px;
+	height: 50px;
+	margin-right: 44px;
+}
+.stores-main span.in{
+	background: url("http://www.dunnu.com/static/web/css/../img/bg_sign10.png") no-repeat right center;
+	transition: background 0.5s;
+}
+.stores-main a:hover{
+	background: #000;
+	color: #fff;
+}
+.stores-main a:hover span.in{
+	background-position: left center;
+}
+.map-list{
+	left: 3%;
+	top: 0;
+	width: 19%;
+	height: 100%;
+	padding: 0 1.5%;
+	background: #fff;
+}
+.map-list .title{
+	border-bottom: 1px solid #e5e5e5;
+	margin-bottom: 10px;
+	font-size: 20px;
+	line-height: 72px;
+	color: #333;
+}
+.map-list form{
+	display: inline-block;
+	width: 100%;
+	font-size: 16px;
+	line-height: 50px;
+}
+.map-list label{
+	min-width: 180px;
+	max-width: 250px;
+	border: 1px solid #c2c2c2;
+	margin-bottom: 18px;
+}
+.map-list input{
+	width: 82%;
+	height: 33px;
+	padding-left: 5%;
+	border: 0;
+	line-height: 33px;
+	color: #666;
+}
+.map-list input.submit{
+	width: 20px;
+	float: right;
+	padding: 0;
+	background: url("http://www.dunnu.com/static/web/css/../img/bg_btn02.png") no-repeat center;
+}
+.map-list .select{
+	padding-bottom: 18px;
+	border-bottom: 1px solid #e5e5e5;
+	margin-bottom: 32px;
+	font-size: 14px;
+	line-height: 48px;
+}
+.map-list select{
+	width: 48%;
+	height: 30px;
+	padding-left: 3%;
+	border: 1px solid #c2c2c2;
+	margin-bottom: 3%;
+	line-height: 30px;
+	color: #666;
+}
+.map-list option{
+	padding: 0 3%;
+	line-height: 24px;
+}
+.map-list a{
+	display: inline-block;
+	padding-right: 20px;
+	background: url("http://www.dunnu.com/static/web/css/../img/bg_sign11.png") no-repeat right 0;
+	font-size: 12px;
+	line-height: 30px;
+	color: #989898;
+	transition: all 0.5s;
+}
+.map-list a:hover{
+	color: #333;
+	background-position: right bottom;
+}
+.map-list .list{
+	width: 100%;
+	padding-right: 8%;
+}
+.map-list .list-in{
+	width: 92%;
+}
+.map-list .list-in ul{
+	width: 100%;
+}
+.map-list .list-in li{
+	width: 100%;
+	height: 114px;
+	border-bottom: 1px solid #e5e5e5;
+	margin-bottom: 20px;
+	color: #989898;
+	cursor: pointer;
+}
+.map-list .list-in p.fz14{
+	font-size: 14px;
+	line-height: 24px;
+	color: #666;
+}
+.map-list .list-in p.tel{
+	font-size: 24px;
+	line-height: 30px;
+	color: #333;
+}
+.BMap_Marker.cur{
+	animation: mapMark 1.2s infinite;
+}
+@keyframes mapMark{
+	0%{
+		transform: translateY(-20px);
+	}
+	100%{
+		transform: translateY(0px);
+	}
+}
+.map-list .list .bar{
+	right: 2%;
+	top: 0;
+	width: 5px;
+	height: 100%;
+	background: #e5e5e5;
+}
+.map-list .list .btn{
+	left: 0;
+	top: 0;
+	width: 5px;
+	height: 58px;
+	background: url("http://www.dunnu.com/static/web/css/../img/bg_btn03.jpg") no-repeat;
+	cursor: pointer;
+}
+
+/*NEWS*/
+.news-nav{
+	left: 50%;
+	top: 45px;
+	height: 26px;
+	line-height: 26px;
+	z-index: 6;
+}
+.news-nav a{
+	display: inline-block;
+	padding: 0 21px;
+	font-size: 14px;
+	color: #989898;
+	transition: color 0.5s;
+}
+.news-nav a:hover, .news-nav a.cur{
+	color: #666;
+}
+.news-info{
+	padding: 48px 0 100px;
+	background: #f6f6f6;
+}
+.news-info .main{
+	width: 864px;
+	margin: 0 auto;
+	font-family: "\5b8b\4f53";
+}
+.news-info .main p.time{
+	font: 18px/62px Vijaya;
+	color: #333;
+	text-align: center;
+}
+.news-info .main p.tit{
+	margin-bottom: 50px;
+	font-size: 20px;
+	line-height: 30px;
+	color: #454545;
+	text-align: center;
+}
+.news-info .main img{
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
+}
+.news-info .turn{
+	height: 36px;
+	margin-top: 50px;
+	text-align: center;
+}
+.news-info .turn a{
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	background: url("http://www.dunnu.com/static/web/css/../img/prev05.jpg") no-repeat;
+	margin: 0 1px;
+}
+.news-info .turn a.next{
+	background-image: url("http://www.dunnu.com/static/web/css/../img/next05.jpg");
+}
+
+/*CONTACT*/
+.contact-wrap{
+	left: 3%;
+	top: 0;
+	width: 11.25%;
+	height: 100%;
+	padding: 0 5%;
+	background: #fff;
+	min-width: 180px;
+}
+.contact-wrap .list{
+	width: 100%;
+	padding-right: 44%;
+}
+.contact-wrap .list-in{
+	left: 0;
+	top: 0;
+	width: 70%;
+}
+.contact-wrap .list-in ul{
+	width: 100%;
+}
+.contact-wrap .list-in li{
+	width: 100%;
+	padding-bottom: 16%;
+	border-bottom: 2px solid #ccc;
+	margin-bottom: 21%;
+	font-size: 30px;
+	line-height: 32px;
+	text-align: center;
+}
+.contact-wrap .list-in p.en{
+	padding-bottom: 7%;
+	font-size: 24px;
+	line-height: 22px;
+}
+.contact-wrap .list-in p.cn{
+	font-size: 12px;
+	line-height: 22px;
+}
+.contact-wrap .bar{
+	right: 2%;
+	top: 0;
+	width: 5px;
+	height: 100%;
+	background: #e5e5e5;
+}
+.contact-wrap .btn{
+	left: 0;
+	top: 0;
+	width: 5px;
+	height: 58px;
+	background: url("http://www.dunnu.com/static/web/css/../img/bg_btn03.jpg") no-repeat;
+	cursor: pointer;
+}
+
+/*SEASON*/
+.season-body{
+	background: url("http://www.dunnu.com/static/web/css/../img/loading-book.gif") no-repeat center #000;
+}
+.season-info{
+	top: -104px;
+	margin-bottom: -104px;
+	*top: 0;
+	*margin: -104px 0 0;
+}
+.season-main{
+	width: 986px;
+	margin: 0 auto;
+	padding: 82px 0 135px;
+	font-size: 14px;
+	line-height: 24px;
+}
+.season-main h2{
+	font-size: 60px;
+	line-height: 110px;
+	color: #333;
+}
+.season-main p.t{
+	margin-bottom: 20px;
+	font-size: 24px;
+	line-height: 36px;
+	color: #333;
+}
+.season-main .detail{
+	padding-bottom: 64px;
+	background: url("http://www.dunnu.com/static/web/css/../img/bg_line02.jpg") no-repeat left bottom;
+	margin-bottom: 70px;
+}
+.season-part .detail{
+	left: -100%;
+	bottom: 35%;
+	font-size: 30px;
+	line-height: 1;
+	color: #333;
+	filter:alpha(opacity=0);
+	opacity: 0;
+}
+.season-part .detail p.cn{
+	font-size: 30px;
+	line-height: 40px;
+	font-family: "\5b8b\4f53";
+}
+.season-part .detail p.fz72{
+	font-size: 60px;
+}
+.season-part .detail p.en{
+	margin-bottom: 90px;
+	filter:alpha(opacity=70);
+	opacity: 0.7;
+}
+.season-part .detail a{
+	display: inline-block;
+	width: 84px;
+	padding-left: 56px;
+	background: url("http://www.dunnu.com/static/web/css/../img/bg_sign12.png") no-repeat 30px 0;
+	border: 1px solid #333;
+	font: 14px/38px Arial;
+	color: #333;
+	text-transform: uppercase;
+	transition: all 0.5s;
+}
+.season-part .detail a.photo{
+	margin-left: -1px;
+	background-image: url("http://www.dunnu.com/static/web/css/../img/bg_sign13.png");
+}
+.season-part .detail a:hover{
+	background-position: 30px -38px;
+	background-color: #fff;
+	color: #000;
+}
+.season-part .close{
+	right: 25px;
+	top: 79px;
+	width: 40px;
+	height: 40px;
+	background: url("http://www.dunnu.com/static/web/css/../img/close01.jpg") no-repeat;
+	cursor: pointer;
+}
+.season-part .video-box .box{
+	left: 50%;
+	top: 50%;
+	width: 100px;
+	height: 100px;
+	margin: -50px 0 0 -50px;
+	filter:alpha(opacity=0);
+	opacity: 0;
+}
+.season-loading .bg{
+	background: #000;
+	filter:alpha(opacity=70);
+	opacity: 0.7;
+}
+.season-loading .intro{
+	left: 50%;
+	top: 50%;
+	width: 384px;
+	margin-left: -192px;
+	font-size: 14px;
+	line-height: 24px;
+	font-family: "\5b8b\4f53";
+	color: #d6d6d6;
+	text-align: center;
+}
+.season-loading img.loading{
+	margin: 12% auto 8%;
+}
+.season-loading .box{
+	margin-top: 29%;
+	line-height: 46px;
+	color: #bababa;
+}
+.season-bg{
+	top: 100%;
+	background: #eee;
+}
+.flippage{
+	width: 98%;
+	margin: 0.7% 1% 1%;
+}
+.flippage .box{
+	width: 50%;
+}
+.flippage .box.h-full{
+	height: 100%;
+}
+.flippage .box.h-half{
+	height: 48.8%;
+}
+.flippage .box.w-half{
+	width: 24%;
+	height: 100%;
+	margin-left: 1%;
+}
+.flippage .box.w-half.mr{
+	margin: 0 1% 0 0;
+}
+.flippage .box.lb{
+	left: 0;
+	bottom: 0;
+}
+.flippage .box.rb{
+	right: 0;
+	bottom: 0;
+}
+.flippage .tips{
+	left: 6%;
+	bottom: 5%;
+	padding-bottom: 40px;
+	background: url("http://www.dunnu.com/static/web/css/../img/bg_sign14.png") no-repeat left bottom;
+	font: 24px/1 "\5b8b\4f53";
+	color: #fff;
+}
+.flippage .tips p.en{
+	font: 60px/1 Vijaya;
+}
+.flip-btn{
+	top: 50%;
+	width: 40px;
+	height: 65px;
+	margin-top: -33px;
+	cursor: pointer;
+	transition: all 0.5s;
+	filter:alpha(opacity=0);
+	opacity: 0;
+}
+.flip-btn.prev{
+	left: 1%;
+	background: url("http://www.dunnu.com/static/web/css/../img/prev06.png") no-repeat left center;
+}
+.flip-btn.prev.hover{
+	background-position: right center;
+}
+.flip-btn.next{
+	right: 1%;
+	background: url("http://www.dunnu.com/static/web/css/../img/next06.png") no-repeat right center;
+}
+.flip-btn.next.hover{
+	background-position: left center;
+}
+
+img.scale{
+	transition: transform 2s;
+}
+a.imgshow:hover img.scale,
+a:hover img.scale,
+img.scale.hover{
+	transform: scale(1.1);
+}
+
+.tips-scroll{
+	position: fixed;
+	right: 65px;
+	bottom: 10px;
+	width: 143px;
+	height: 45px;
+	background: url("http://www.dunnu.com/static/web/css/../img/bg_scroll01.png") no-repeat;
+}
+.tips-scroll.poa{
+	position: absolute!important;
+}
+.tips-scroll .in{
+	left: 50%;
+	top: 12px;
+	width: 2px;
+	height: 5px;
+	background: url("http://www.dunnu.com/static/web/css/../img/bg_scroll02.png") no-repeat;
+	margin-left: -1px;
+	animation: scr 1s infinite;
+}
+@keyframes scr{
+	0%{
+		top : 12px;
+	}
+	100%{
+		top : 15px;
+	}
+}
+
+.i-products .btn a,
+.i-news .btn a {
+    position: relative;
+    display: inline-block;
+    border-top: 1px solid #37979d;
+    border-bottom: 1px solid #37979d;
+}
+
+.i-products .btn a::after,
+.i-news .btn a::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background: #37979d;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.i-products .btn a span,
+.i-news .btn a span {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    padding: 0 40px 0 15px;
+    background: url(../images/arrows.png) no-repeat 85% center;
+    font-size: 18px;
+    line-height: 38px;
+    color: #36979d;
+ 
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.i-products .btn a:hover::after,
+.i-news .btn a:hover::after {
+    height: 100%;
+}
+
+.i-products .btn a:hover span,
+.i-news .btn a:hover span {
+    background: url(../images/arrowss.png) no-repeat 95% center;
+    color: #fff;
+}
+
+
+.i-ad {
+    height: 620px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.i-ad a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.i-news {
+    padding:0 7%;
+}
+
+.i-news .news-list {
+    width: 1245px;
+    margin:0 auto;
+}
+
+.i-news .news-list li {
+    float: left;
+    position: relative;
+    width: 395px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #999;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.i-news .news-list li .time {
+    position: absolute;
+    left: 50%;
+    bottom: -46px;
+    width: 92px;
+    height:46px;
+    padding: 27px 0 19px;
+    background: url(../images/bg_sign07.png) no-repeat center;
+    margin-left: -46px;
+	font-family:'微软雅黑';
+    line-height:22px;
+    color: #36979d;
+	font-size:18px;
+    text-align: center;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.i-news .news-list li .time p.fz20 {
+    font-size: 21px;
+    line-height: 1;
+}
+.i-news .news-list li a.f-img{
+    display: block;
+    position: relative;
+
+}
+.i-news .news-list li a.tit {
+    display: inline-block;
+    margin: 15.7% 0 0.3%;
+    padding: 6px 0;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000;
+    transition: all .5s;
+	font-family:'宋体';
+}
+.i-news .news-list li a.tit:hover{
+    color: #ff0000;
+}
+
+.i-news .news-list li p{
+    padding: 0 5px;
+
+ 
+}
+
+.i-news .news-list li a.more {
+    display: inline-block;
+    padding: 0 20px 0 5px;
+    background: url(../images/bg_sign08.png) no-repeat 95% center;
+    margin-top: 34px;
+    font-size: 14px;
+    line-height: 2;
+    color: #222;
+	font-family:'微软雅黑';
+    text-transform: uppercase;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.i-news .news-list li a.more:hover {
+    background-position: right center;
+}
+
+.i-news .news-list li.show {
+    opacity: 1;
+}
+
+.i-news .news-list li:nth-child(3n-1) {
+    margin: 0 30px;
+}
+
+@media screen and (max-width: 1440px) {
+    .i-news .news-list {
+        width: 95%;
+    }
+
+    .i-news .news-list li {
+        width: calc(33.33% - 20px);
+    }
+
+    .i-news .news-list li .time {
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+
+    }
+}
+.i-news .news-list li img{
+    transition: all .5s;
+}
+.i-news .news-list li:hover img{
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    box-shadow: 0 0 6px rgba(0,0,0,.3);
+}
+
+
